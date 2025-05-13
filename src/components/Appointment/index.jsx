@@ -4,7 +4,7 @@ import Header from "./Header";
 
 import Empty from "./Empty";
 import Show from "./Show";
-
+import Form from "./Form";
 
 const EMPTY = "EMPTY";
 const SHOW = "SHOW";
@@ -26,8 +26,11 @@ export default function Appointment(props) {
           interviewer={props.interview.interviewer}
           onDelete={() => console.log("CONFIRM")}
           onEdit={() => console.log("EDIT")}
-
         />
+      )}
+
+      {mode === CREATE && (
+        <Form interviewers={props.interviewers} />
       )}
     </article>
   );
