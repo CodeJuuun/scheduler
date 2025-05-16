@@ -1,5 +1,5 @@
 import "@testing-library/jest-dom";
-import { render, cleanup } from "@testing-library/react";
+import { render, cleanup, fireEvent } from "@testing-library/react";
 import Form from "../Appointment/Form";
 
 afterEach(cleanup);
@@ -51,7 +51,7 @@ describe("Form", () => {
       <Form
         interviewers={interviewers}
         onSave={onSave}
-        student="Lydia Miller-Jones"
+        name="Lydia Miller-Jones"
       />
     );
     /* 3. Click the save button */
@@ -69,7 +69,7 @@ describe("Form", () => {
       <Form
         interviewers={interviewers}
         onSave={onSave}
-        student="Lydia Miller-Jones"
+        name="Lydia Miller-Jones"
         interviewer={interviewers[0].id}
       />
     );
