@@ -1,6 +1,6 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { render, cleanup, fireEvent } from "@testing-library/react";
+import { render, cleanup, fireEvent, } from "@testing-library/react";
 import Form from "../Appointment/Form";
 
 afterEach(cleanup);
